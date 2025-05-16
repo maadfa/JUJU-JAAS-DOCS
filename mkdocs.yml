@@ -45,10 +45,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/maadfa
+
     - 
 
 extra_css:
