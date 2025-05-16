@@ -1,0 +1,55 @@
+site_name: Juju & JAAS Documentation
+site_description: A complete beginner-friendly guide to Juju and JAAS with examples, CLI references, and troubleshooting help.
+site_author: Your Name
+repo_url: https://github.com/maadfa/JUJU-JAAS-DOCS.git 
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+    - scheme: slate
+      primary: blue
+      accent: light blue
+  features:
+    - navigation.instant
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.tabs.link
+  icon:
+    logo: material/cloud
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - JAAS Overview: jaas.md
+  - Use Cases: use-cases.md
+  - CLI Reference: cli-reference.md
+  - Troubleshooting Errors: errors.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/maadfa
+    - 
+
+extra_css:
+  - stylesheets/extra.css  # Optional: add your own custom CSS if needed
