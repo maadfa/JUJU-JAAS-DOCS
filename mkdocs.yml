@@ -35,7 +35,8 @@ markdown_extensions:
   - admonition
   - codehilite
   - toc:
-      permalink: true
+    permalink: true
+markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.highlight
@@ -44,9 +45,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.emoji:
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
-
-    - 
+  
 
 extra_css:
   - stylesheets/extra.css  # Optional: add your own custom CSS if needed
