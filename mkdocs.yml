@@ -1,6 +1,6 @@
 site_name: Juju & JAAS Documentation
 site_description: A complete beginner-friendly guide to Juju and JAAS with examples, CLI references, and troubleshooting help.
-site_author: Your Name
+site_author: Maadfa
 repo_url: https://github.com/maadfa/JUJU-JAAS-DOCS.git 
 
 theme:
@@ -26,7 +26,7 @@ theme:
 
 nav:
   - Home: index.md
-  - JAAS Overview: jaas.md
+  - JAAS and Juju Overview: jaas.md
   - Use Cases: use-cases.md
   - CLI Reference: cli-reference.md
   - Troubleshooting Errors: errors.md
