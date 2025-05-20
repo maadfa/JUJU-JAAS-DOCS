@@ -2,7 +2,7 @@
 
 This guide provides an overview of essential Juju CLI (Command-Line Interface) commands. It's a text-based interface that allows users to interact with a computer, software, or system by typing commands into a terminal or console,instead of clicking on tabs,buttons or menu etc.Use Windows Powershell terminal to run commands and interact with juju.The Juju CLI is the primary way users interact with Juju to deploy, manage, and scale applications on various cloud platforms.
 
----
+
 
 ##  Getting Started
 
@@ -10,14 +10,12 @@ To verify that Juju is installed correctly, open your terminal and type:
 
 ```bash
 juju version
-
 ---
 
 
 This should return the current version of Juju installed on your machine.
 
-
-##  Bootstrap a Controller
+Bootstrap a Controller
 
 A **controller** is the brain of Juju operations. It manages models, machines, and applications. Before you can deploy any services or charms, you need to **bootstrap** a controller. Bootstrapping sets up the initial environment where Juju can operate and manage your deployments.Run the following command for bootstrapping .
 
@@ -99,7 +97,7 @@ To switch between the Models ,run  the following  commands on your terminal
 juju switch <controller-name>:<model-name>
 ```
 
-** Example
+Example
 
 ```bash
 juju switch my-controller:dev
@@ -182,9 +180,9 @@ juju remove-application <app-name>
 juju destroy-model <model-name>
 ```
 
-  ** Example 
+Example 
 
-  ```bash
+```bash
 juju destroy-model wordpress-site
- ```
+```
 
