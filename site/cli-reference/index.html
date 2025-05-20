@@ -377,24 +377,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-a-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add a Model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#useful-tips" class="md-nav__link">
     <span class="md-ellipsis">
       Useful Tips
@@ -404,9 +386,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#to-switch-between-models" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      To switch between models:
     </span>
   </a>
   
@@ -514,24 +496,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-a-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add a Model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#useful-tips" class="md-nav__link">
     <span class="md-ellipsis">
       Useful Tips
@@ -541,9 +505,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#to-switch-between-models" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      To switch between models:
     </span>
   </a>
   
@@ -614,116 +578,119 @@
 <hr />
 <h2 id="getting-started">Getting Started</h2>
 <p>To verify that Juju is installed correctly, open your terminal and type:</p>
-<p><div class="highlight"><pre><span></span><code>juju version
+<p><div class="highlight"><pre><span></span><code>juju<span class="w"> </span>version
 
-&#39;&#39;&#39;
-This should return the current version of Juju installed on your machine.
+This<span class="w"> </span>should<span class="w"> </span><span class="k">return</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>Juju<span class="w"> </span>installed<span class="w"> </span>on<span class="w"> </span>your<span class="w"> </span>machine.
 
-   ---
+<span class="w">   </span>---
 
 
-   # Bootstrap a Controller
+<span class="w">   </span><span class="c1"># Bootstrap a Controller</span>
 
-A **controller** is the brain of Juju operations. It manages models, machines, and applications. Before you can deploy any services or charms, you need to **bootstrap** a controller. Bootstrapping sets up the initial environment where Juju can operate and manage your deployments.Run the following command for bootstrapping .
+A<span class="w"> </span>**controller**<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>brain<span class="w"> </span>of<span class="w"> </span>Juju<span class="w"> </span>operations.<span class="w"> </span>It<span class="w"> </span>manages<span class="w"> </span>models,<span class="w"> </span>machines,<span class="w"> </span>and<span class="w"> </span>applications.<span class="w"> </span>Before<span class="w"> </span>you<span class="w"> </span>can<span class="w"> </span>deploy<span class="w"> </span>any<span class="w"> </span>services<span class="w"> </span>or<span class="w"> </span>charms,<span class="w"> </span>you<span class="w"> </span>need<span class="w"> </span>to<span class="w"> </span>**bootstrap**<span class="w"> </span>a<span class="w"> </span>controller.<span class="w"> </span>Bootstrapping<span class="w"> </span>sets<span class="w"> </span>up<span class="w"> </span>the<span class="w"> </span>initial<span class="w"> </span>environment<span class="w"> </span>where<span class="w"> </span>Juju<span class="w"> </span>can<span class="w"> </span>operate<span class="w"> </span>and<span class="w"> </span>manage<span class="w"> </span>your<span class="w"> </span>deployments.Run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>bootstrapping<span class="w"> </span>.
+
+<span class="sb">```</span>bash
+juju<span class="w"> </span>bootstrap<span class="w"> </span>&lt;cloud-name&gt;<span class="w"> </span>&lt;controller-name&gt;
+
+
+
+The<span class="w"> </span>cloud<span class="w"> </span>name<span class="w"> </span>specifies<span class="w"> </span>which<span class="w"> </span>cloud<span class="w"> </span>environment<span class="w"> </span>one<span class="w">  </span>wants<span class="w"> </span>to<span class="w"> </span>deploy<span class="w"> </span>Juju<span class="w"> </span>on.A<span class="w"> </span>cloud<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>a<span class="w"> </span>public<span class="w"> </span>cloud<span class="w"> </span><span class="o">(</span>like<span class="w"> </span>AWS,<span class="w"> </span>Azure,<span class="w"> </span>Google<span class="w"> </span>Cloud<span class="o">)</span>,<span class="w"> </span>a<span class="w"> </span>private<span class="w"> </span>cloud<span class="w"> </span><span class="o">(</span>like<span class="w"> </span>OpenStack<span class="o">)</span>,<span class="w"> </span>or<span class="w"> </span>even<span class="w"> </span>a<span class="w"> </span><span class="nb">local</span><span class="w"> </span>environment<span class="w"> </span><span class="o">(</span>like<span class="w"> </span>LXD<span class="o">)</span>.
+
+The<span class="w"> </span>controller<span class="w"> </span>name<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>custom<span class="w"> </span>name<span class="w"> </span>given<span class="w">  </span>to<span class="w"> </span>your<span class="w"> </span>Juju<span class="w"> </span>controller
+A<span class="w"> </span>controller<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>brain<span class="w"> </span>of<span class="w"> </span>Juju<span class="p">;</span><span class="w"> </span>it<span class="w"> </span>manages<span class="w"> </span>your<span class="w"> </span>models<span class="w"> </span>and<span class="w"> </span>deployments.
+Naming<span class="w"> </span>the<span class="w"> </span>controller<span class="w"> </span>helps<span class="w"> </span>you<span class="w"> </span>identify<span class="w"> </span>it,<span class="w"> </span>especially<span class="w"> </span><span class="k">if</span><span class="w"> </span>one<span class="w">  </span>manages<span class="w"> </span>multiple<span class="w"> </span>controllers.
+
+<span class="w"> </span>**<span class="w"> </span>Example
+Suppose<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>bootstrap<span class="w"> </span>Juju<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>public<span class="w"> </span>cloud<span class="w"> </span>called<span class="w"> </span>aws<span class="w"> </span>and<span class="w"> </span>name<span class="w"> </span>your<span class="w"> </span>controller<span class="w"> </span>my-controller.Then
+
+<span class="sb">```</span>bash
+juju<span class="w"> </span>bootstrap<span class="w"> </span>aws<span class="w"> </span>my-controller
+
+
+Juju<span class="w"> </span>will<span class="w"> </span>start<span class="w"> </span>provisioning<span class="w"> </span>resources<span class="w"> </span>on<span class="w"> </span>AWS.
+
+You<span class="w"> </span>will<span class="w"> </span>see<span class="w"> </span>output<span class="w"> </span>showing<span class="w"> </span>the<span class="w"> </span>bootstrap<span class="w"> </span>process,<span class="w"> </span>including<span class="w"> </span>creating<span class="w"> </span>instances<span class="w"> </span>and<span class="w"> </span>setting<span class="w"> </span>up<span class="w"> </span>the<span class="w"> </span>controller.
+
+Once<span class="w"> </span>complete,<span class="w"> </span>you<span class="w"> </span>get<span class="w"> </span>a<span class="w"> </span>success<span class="w"> </span>message<span class="w"> </span>like:
+
+!!!<span class="w"> </span>success<span class="w"> </span><span class="s2">&quot;Bootstrap Successful&quot;</span>
+<span class="w">    </span>Controller<span class="w"> </span><span class="s2">&quot;my-controller&quot;</span><span class="w"> </span>bootstrapped<span class="w"> </span>on<span class="w"> </span>cloud<span class="w"> </span><span class="s2">&quot;aws&quot;</span>
+
+After<span class="w"> </span>bootstrapping,<span class="w"> </span>you<span class="w"> </span>can<span class="w"> </span>start<span class="w"> </span>deploying<span class="w"> </span>applications<span class="w"> </span>with<span class="w"> </span>Juju<span class="w"> </span>using<span class="w"> </span>this<span class="w"> </span>controller.
+
+<span class="c1">## Add a Model</span>
+
+After<span class="w"> </span>bootstrapping<span class="w"> </span>a<span class="w"> </span>controller<span class="w"> </span><span class="k">in</span><span class="w"> </span>Juju,<span class="w"> </span>the<span class="w"> </span>next<span class="w"> </span>step<span class="w"> </span>is<span class="w"> </span>to<span class="w"> </span>**add<span class="w"> </span>a<span class="w"> </span>model**.<span class="w"> </span>A<span class="w"> </span>**model**<span class="w"> </span><span class="k">in</span><span class="w"> </span>Juju<span class="w"> </span>is<span class="w"> </span>like<span class="w"> </span>a<span class="w"> </span>workspace<span class="w"> </span>or<span class="w"> </span>environment<span class="w"> </span>where<span class="w"> </span>you<span class="w"> </span>deploy<span class="w"> </span>and<span class="w"> </span>manage<span class="w"> </span>your<span class="w"> </span>applications.
+A<span class="w"> </span>model<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>container<span class="w"> </span><span class="k">for</span><span class="w"> </span>applications<span class="w"> </span>and<span class="w"> </span>their<span class="w"> </span>configurations.
+
+Each<span class="w"> </span>model<span class="w"> </span>is<span class="w"> </span>isolated<span class="w"> </span>from<span class="w"> </span>others.<span class="w"> </span>This<span class="w"> </span>means<span class="w"> </span>you<span class="w"> </span>can<span class="w"> </span>have<span class="w"> </span>different<span class="w"> </span>versions<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>application<span class="w"> </span>deployed<span class="w"> </span><span class="k">in</span><span class="w"> </span>different<span class="w"> </span>models<span class="w"> </span>without<span class="w"> </span>any<span class="w"> </span>error.
+
+<span class="sb">```</span>bash
+juju<span class="w"> </span>add-model<span class="w"> </span>&lt;model-name&gt;
+
+
+&lt;model-name&gt;<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>name<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>give<span class="w"> </span>your<span class="w"> </span>model.<span class="w"> </span>It<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>simple<span class="w"> </span>and<span class="w"> </span>descriptive.Good<span class="w"> </span>examples<span class="w"> </span>are<span class="w">  </span>dev,<span class="w"> </span>testing,<span class="w"> </span>production,<span class="w"> </span>or<span class="w"> </span>my-webapp<span class="w"> </span>etc.
+
+<span class="sb">```</span>bash
+juju<span class="w"> </span>add-model<span class="w"> </span>dev
+
+This<span class="w"> </span><span class="nb">command</span><span class="w"> </span>adds<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>model<span class="w"> </span>named<span class="w"> </span>dev<span class="w"> </span>under<span class="w"> </span>the<span class="w"> </span>currently<span class="w"> </span>active<span class="w"> </span>controller.
+
+<span class="c1">## Expected Output</span>
 </code></pre></div>
-juju bootstrap <cloud-name> <controller-name></p>
-<p>```
-The cloud name specifies which cloud environment one  wants to deploy Juju on.A cloud can be a public cloud (like AWS, Azure, Google Cloud), a private cloud (like OpenStack), or even a local environment (like LXD).</p>
-<p>The controller name is a custom name given  to your Juju controller
-A controller is the brain of Juju; it manages your models and deployments.
-Naming the controller helps you identify it, especially if one  manages multiple controllers.</p>
-<p>Example:
-Suppose you want to bootstrap Juju on the public cloud called aws and name your controller my-controller.Then</p>
-<p>'''
-juju bootstrap aws my-controller</p>
-<p>'''</p>
-<p>Juju will start provisioning resources on AWS.</p>
-<p>You will see output showing the bootstrap process, including creating instances and setting up the controller.</p>
-<p>Once complete, you get a success message like:</p>
-<p>'''</p>
-<p>Bootstrap successful
-Controller "my-controller" bootstrapped on cloud "aws"</p>
-<p>'''</p>
-<p>After bootstrapping, you can start deploying applications with Juju using this controller.</p>
-<h2 id="add-a-model">Add a Model</h2>
-<p>After bootstrapping a controller in Juju, the next step is to <strong>add a model</strong>. A <strong>model</strong> in Juju is like a workspace or environment where you deploy and manage your applications.
-A model is a container for applications and their configurations.</p>
-<p>Each model is isolated from others. This means you can have different versions of the same application deployed in different models without any error.</p>
-<p>'''
-juju add-model <model-name></p>
-<p>'''
-<model-name> is the name you want to give your model. It should be simple and descriptive.Good examples are  dev, testing, production, or my-webapp etc.</p>
-<p>'''</p>
-<p>juju add-model dev</p>
-<p>'''</p>
-<p>This command adds a new model named dev under the currently active controller.</p>
-<h2 id="expected-output">Expected Output</h2>
-<p>'''</p>
-<p>Added 'dev' model on my-controller/default with credential 'default' for user 'admin'</p>
-<p>'''</p>
+Added 'dev' model on my-controller/default with credential 'default' for user 'admin'
+```</p>
 <p>This message confirms that your model has been successfully added and is ready for deployments.</p>
 <h2 id="useful-tips">Useful Tips</h2>
 <p>You can view all your models using:</p>
-<p>'''</p>
-<p>juju models</p>
-<p>'''</p>
-<p>To switch between models:</p>
-<p>'''
+<p>```bash
+juju models</p>
+<h2 id="to-switch-between-models">To switch between models:</h2>
+<p>To switch between the Models ,run  the following  commands on your terminal </p>
+<p>```bash
 juju switch <controller-name>:<model-name></p>
-<p>'''</p>
-<h2 id="example">Example</h2>
-<p>'''</p>
-<p>juju switch my-controller:dev</p>
-<p>'''</p>
+<p>** Example</p>
+<p>```bash
+juju switch my-controller:dev</p>
 <h2 id="deploy-an-application-charm">Deploy an Application (Charm)</h2>
 <p>Run the following command in your terminal .</p>
-<p>'''
+<p>```bash
 juju deploy <charm-name></p>
-<p>'''
-This command deploys an application using a "charm" (a package of operational code). Charms automate the installation and configuration of software.</p>
+<p>This command deploys an application using a "charm" (a package of operational code). Charms automate the installation and configuration of software.</p>
 <p>Example</p>
-<p>'''</p>
-<p>juju deploy mysql</p>
-<p>'''</p>
+<p>```bash
+juju deploy mysql</p>
 <p>This command Deploys MySQL database.</p>
 <h2 id="relate-applications">Relate Applications</h2>
 <p>Many applications depend on others. This command connects services so they can communicate e.g., linking a web app to a database.</p>
-<p>'''
+<p>```bash
 juju relate <app-1> <app-2></p>
-<p>'''</p>
 <p>Example </p>
-<p>'''</p>
-<p>juju relate wordpress mysql</p>
-<p>'''</p>
+<p>```bash
+juju relate wordpress mysql</p>
 <h2 id="add-units-scale-application">Add Units (Scale Application)</h2>
 <p>Add units to  to scale your app by adding more instances (units). This improves reliability and handles more user traffic.</p>
-<p>'''
+<p>```bash
 juju add-unit <app-name> -n <number></p>
-<p>'''</p>
 <p>Example</p>
-<p>'''</p>
-<p>juju add-unit mysql -n 2</p>
-<p>'''</p>
+<p>```bash
+juju add-unit mysql -n 2</p>
 <p>This command adds two more MYSQL.</p>
 <h2 id="check-status">Check Status</h2>
 <p>This shows a real-time overview of all deployed services, units, machines, and their health status.</p>
-<p>'''
-juju status </p>
-<p>'''
- ## Remove Application</p>
+<p>```bash
+juju status</p>
+<p>## Remove Application</p>
 <p>It is  useful for cleanup or switching apps. It uninstalls an application and removes it from your model.</p>
-<p>'''
-  juju remove-application <app-name></p>
-<p>'''</p>
+<p>```bash
+juju remove-application <app-name></p>
 <p>## Destroy Model</p>
 <p>This deletes the entire model and all applications and units inside it.</p>
-<p>'''
-  juju destroy-model <model-name></p>
-<p>'''
-  Example </p>
-<p>'''
-  juju destroy-model wordpress-site</p>
-<p>'''</p>
+<p>```bash
+juju destroy-model <model-name></p>
+<p>** Example </p>
+<p>```bash
+juju destroy-model wordpress-site</p>
 
 
 
