@@ -530,14 +530,17 @@
 </code></pre></div>
 <h2 id="permission-denied-or-access-denied-on-windows">Permission denied or access denied on Windows</h2>
 <p>This error occurs when you may not have admin rights or execution permission to install or run Juju.To fix this error ,define a clear path for your system .In case of error,your terminal will show error like</p>
-<p>!!! error "Command Not Recognized"
-    <div class="highlight"><pre><span></span><code><span class="s1">&#39;juju&#39;</span><span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>recognized<span class="w"> </span>as<span class="w"> </span>an<span class="w"> </span>internal<span class="w"> </span>or<span class="w"> </span>external<span class="w"> </span>command,
+<div class="admonition error">
+<p class="admonition-title">Command Not Recognized</p>
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;juju&#39;</span><span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>recognized<span class="w"> </span>as<span class="w"> </span>an<span class="w"> </span>internal<span class="w"> </span>or<span class="w"> </span>external<span class="w"> </span>command,
 operable<span class="w"> </span>program<span class="w"> </span>or<span class="w"> </span>batch<span class="w"> </span>file.
-</code></pre></div></p>
+</code></pre></div>
+</div>
 <p>This error means that your computer doesn’t know where to find the Juju program. The system looks for executable programs in the "PATH" environment variable, and Juju hasn’t been added to that list yet.</p>
 <h2 id="how-to-fix_1">How to fix</h2>
-<p>??? info "Steps to Add Juju to PATH on Windows"
-    <div class="highlight"><pre><span></span><code>Find the location where juju.exe is saved
+<details class="info">
+<summary>Steps to Add Juju to PATH on Windows</summary>
+<div class="highlight"><pre><span></span><code>Find the location where juju.exe is saved
 
 Add this folder to your system PATH:
 
@@ -547,7 +550,8 @@ Add this folder to your system PATH:
 4. Under System variables, select &quot;Path&quot;
 5. Click &quot;New&quot;, then paste the Juju path (e.g., C:\Program Files\juju)
 6. Click OK to save and exit all dialogs
-</code></pre></div></p>
+</code></pre></div>
+</details>
 <p>Then, Restart your terminal and Run the command again</p>
 <p><div class="highlight"><pre><span></span><code>juju<span class="w"> </span>version
 
