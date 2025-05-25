@@ -10,12 +10,12 @@ To verify that Juju is installed correctly, open your terminal and type:
 
 ```bash
 juju version
----
+```
 
 
-This should return the current version of Juju installed on your machine.
+This should return the current version of Juju installed on your machine. 
 
-Bootstrap a Controller
+## Bootstrap a Controller
 
 A **controller** is the brain of Juju operations. It manages models, machines, and applications. Before you can deploy any services or charms, you need to **bootstrap** a controller. Bootstrapping sets up the initial environment where Juju can operate and manage your deployments.Run the following command for bootstrapping .
 
