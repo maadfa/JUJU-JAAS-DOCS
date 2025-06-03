@@ -32,7 +32,7 @@ The controller name is a custom name given  to your Juju controller
 A controller is the brain of Juju; it manages your models and deployments.
 Naming the controller helps you identify it, especially if one  manages multiple controllers.
 
- ** Example
+ **Example**
 
 Suppose you want to bootstrap Juju on the public cloud called aws and name your controller my-controller.Then
 
@@ -52,7 +52,7 @@ Once complete, you get a success message like:
 
 After bootstrapping, you can start deploying applications with Juju using this controller.
 
-## Add a Model
+# Add a Model
 
 After bootstrapping a controller in Juju, the next step is to **add a model**. A **model** in Juju is like a workspace or environment where you deploy and manage your applications.
 A model is a container for applications and their configurations.
@@ -73,7 +73,7 @@ juju add-model dev
 
 This command adds a new model named dev under the currently active controller.
 
-## Expected Output
+# Expected Output
 
 ```
 Added 'dev' model on my-controller/default with credential 'default' for user 'admin'
@@ -89,7 +89,7 @@ You can view all your models using:
 juju models
 ```
 
-## To switch between models:
+# To switch between models:
 
 To switch between the Models ,run  the following  commands on your terminal 
 
@@ -105,7 +105,7 @@ juju switch my-controller:dev
 
 
 
-##  Deploy an Application (Charm)
+# Deploy an Application (Charm)
 
 Run the following command in your terminal .
 
@@ -123,7 +123,7 @@ juju deploy mysql
 
 This command Deploys MySQL database.
 
-##  Relate Applications
+# Relate Applications
 
 Many applications depend on others. This command connects services so they can communicate e.g., linking a web app to a database.
 
@@ -138,7 +138,7 @@ Example
 juju relate wordpress mysql
 ```
 
-## Add Units (Scale Application)
+# Add Units (Scale Application)
 
 Add units to  to scale your app by adding more instances (units). This improves reliability and handles more user traffic.
 
@@ -148,7 +148,7 @@ juju add-unit <app-name> -n <number>
 
 
 
-Example
+**Example**
 
 ```bash
 juju add-unit mysql -n 2
@@ -156,7 +156,7 @@ juju add-unit mysql -n 2
 
 This command adds two more MYSQL.
 
-## Check Status
+# Check Status
 
 This shows a real-time overview of all deployed services, units, machines, and their health status.
 
@@ -164,7 +164,7 @@ This shows a real-time overview of all deployed services, units, machines, and t
 juju status
 ```
 
- ## Remove Application
+ # Remove Application
 
  It is  useful for cleanup or switching apps. It uninstalls an application and removes it from your model.
 
@@ -172,7 +172,7 @@ juju status
 juju remove-application <app-name>
 ```
 
-  ## Destroy Model
+  # Destroy Model
 
   This deletes the entire model and all applications and units inside it.
 

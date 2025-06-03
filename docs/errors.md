@@ -1,11 +1,11 @@
 # Common Juju Errors and How to Fix Them
 When using juju via CLI,following errrors can occur .
 
-## 1. `Juju Bootstrap` Error: Cloud Not Found
+# 1. `Juju Bootstrap` Error: Cloud Not Found
 
 This error usually appears when you try to bootstrap a controller without specifying a valid cloud name.
 
-## How to Fix:
+# How to Fix:
 
 Use a valid cloud name from the list of available clouds. To see available clouds, run:
 
@@ -19,7 +19,7 @@ Then use one of those clouds in your bootstrap command:
 juju bootstrap lxd my-controller
 ```
 
-## Permission denied or access denied on Windows
+# Permission denied or access denied on Windows
 
 This error occurs when you may not have admin rights or execution permission to install or run Juju.To fix this error ,define a clear path for your system .In case of error,your terminal will show error like
 
@@ -34,7 +34,7 @@ This error means that your computer doesn’t know where to find the Juju progra
 
 
 
-## How to fix
+# How to fix
 
 
 ??? info "Steps to Add Juju to PATH on Windows"
@@ -55,9 +55,10 @@ Then, Restart your terminal and Run the command again
 
 ```bash
 juju version
-
+```
 
 You should now see something like
+
 
 ```
 3.4.0-ubuntu-amd64
