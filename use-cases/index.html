@@ -302,6 +302,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -334,21 +336,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#use-cases-for-juju" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use Cases for Juju
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#cloud-application-deployment" class="md-nav__link">
@@ -365,48 +360,6 @@
       Microservices and Container Orchestration
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#devops-automation" class="md-nav__link">
-    <span class="md-ellipsis">
-      DevOps Automation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DevOps Automation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#testing-and-prototyping-environments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing and Prototyping Environments
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring-observability-and-scaling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitoring, Observability, and Scaling
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multi-user-collaboration-and-access-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multi-User Collaboration and Access Control
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -479,21 +432,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#use-cases-for-juju" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use Cases for Juju
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#cloud-application-deployment" class="md-nav__link">
@@ -510,48 +456,6 @@
       Microservices and Container Orchestration
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#devops-automation" class="md-nav__link">
-    <span class="md-ellipsis">
-      DevOps Automation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DevOps Automation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#testing-and-prototyping-environments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing and Prototyping Environments
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring-observability-and-scaling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitoring, Observability, and Scaling
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multi-user-collaboration-and-access-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multi-User Collaboration and Access Control
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -579,7 +483,7 @@
   
 
 
-<h2 id="use-cases-for-juju">Use Cases for Juju</h2>
+<h1 id="use-cases-for-juju">Use Cases for Juju</h1>
 <p>Juju is a powerful open-source operator lifecycle management tool developed by Canonical (the creators of Ubuntu). It helps manage, configure, scale, and operate software and infrastructure across public clouds, private data centers, and even on bare metal.</p>
 <p>This section explains where and why you might use Juju in real-world cases.</p>
 <h2 id="cloud-application-deployment"><strong>Cloud Application Deployment</strong></h2>
@@ -590,8 +494,8 @@
 <li>Google Cloud Platform</li>
 <li>OpenStack</li>
 </ul>
-<p><strong>Example</strong>:<br />
-You want to deploy a Kubernetes cluster on AWS. Instead of manually provisioning resources and configuring them, Juju can do this using reusable, tested <strong>charms</strong>.</p>
+<p><strong>Example</strong></p>
+<p>You want to deploy a Kubernetes cluster on AWS. Instead of manually provisioning resources and configuring them, Juju can do this using reusable, tested <strong>charms</strong>.</p>
 <hr />
 <h2 id="microservices-and-container-orchestration"><strong>Microservices and Container Orchestration</strong></h2>
 <p>Juju works well with Kubernetes and helps manage microservice-based architectures.</p>
@@ -613,7 +517,7 @@ You're running a microservices app with 10 different containers. Juju lets you d
 <h2 id="monitoring-observability-and-scaling"><strong>Monitoring, Observability, and Scaling</strong></h2>
 <p>Juju works well with monitoring tools like Prometheus, Grafana, and Loki to help you track and understand how your apps are running.</p>
 <p><strong>Example</strong>
-Deploy a monitoring stack using charms. Juju handles the configuration and relationships between them. Scaling can be done by running:</p>
+Deploy a monitoring stack using charms. Juju handles the configuration and relationships between them. </p>
 <h2 id="multi-user-collaboration-and-access-control"><strong>Multi-User Collaboration and Access Control</strong></h2>
 <p>Juju uses models and controllers to divide tasks.It  makes it easier for different teams to manage their own parts of a project.</p>
 <p><strong>Use Case</strong>
