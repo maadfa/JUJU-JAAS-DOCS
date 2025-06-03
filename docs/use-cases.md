@@ -1,4 +1,4 @@
-## Use Cases for Juju
+#Use Cases for Juju
 
 Juju is a powerful open-source operator lifecycle management tool developed by Canonical (the creators of Ubuntu). It helps manage, configure, scale, and operate software and infrastructure across public clouds, private data centers, and even on bare metal.
 
@@ -13,7 +13,8 @@ Juju is widely used to deploy and manage applications across multiple clouds lik
 - Google Cloud Platform
 - OpenStack
 
-**Example**:  
+**Example**
+
 You want to deploy a Kubernetes cluster on AWS. Instead of manually provisioning resources and configuring them, Juju can do this using reusable, tested **charms**.
 
 ---
@@ -53,7 +54,7 @@ A QA team wants to test the latest version of a database stack. Juju can quickly
 Juju works well with monitoring tools like Prometheus, Grafana, and Loki to help you track and understand how your apps are running.
 
 **Example**
-Deploy a monitoring stack using charms. Juju handles the configuration and relationships between them. Scaling can be done by running:
+Deploy a monitoring stack using charms. Juju handles the configuration and relationships between them. 
 
 ## **Multi-User Collaboration and Access Control**
 
